@@ -1,0 +1,15 @@
+<form action= "{% url 'url_shortenre:short' %}"  method="POST">
+    {% csrf_token %}
+    <input type="text" name="post-url"><br>Enter the url here<br>
+    <input type="text" name="Title"><br>What is it for ? <br>
+    <input type="submit" value="get url">
+</form>
+
+{% if short %}
+    <ul>
+        <li> {{ short.url_short }} </li>
+        <li>{{ short.url_title }}</li>
+    </ul>
+{% else %}
+    <p>No URLS are available.</p>
+{% endif %}
