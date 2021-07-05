@@ -11,7 +11,7 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "env": {
-                "bitly_token":"bdbe7cc4edd5e6b2c5c5a298f6db54021b878dd0"
+                "bitly_token":"Your bitly token"
             }
         }
     ]
