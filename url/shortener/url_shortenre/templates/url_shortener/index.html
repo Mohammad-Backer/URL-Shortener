@@ -7,8 +7,10 @@
 
 {% if short %}
     <ul>
-        <li> {{ short.url_short }} </li>
-        <li>{{ short.url_title }}</li>
+        {% for sh in short %}
+        <li> {{ sh.url_short }} </li>
+        <li>{{ sh.url_title }}</li>
+        {% endfor %}
     </ul>
 {% else %}
     <p>No URLS are available.</p>
