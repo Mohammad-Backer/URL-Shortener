@@ -1,15 +1,16 @@
 <form action= "{% url 'url_shortenre:short' %}"  method="POST">
     {% csrf_token %}
-    <input type="text" name="post-url"><br>Enter the url here<br>
-    <input type="text" name="Title"><br>What is it for ? <br>
+    <br>Enter the url here: <br>
+    <input type="text" name="post-url">
+    <br>What is it for ? <br>
+    <input type="text" name="Title">
     <input type="submit" value="get url">
 </form>
 
 {% if short %}
     <ul>
         {% for sh in short %}
-        <li> {{ sh.url_short }} </li>
-        <li>{{ sh.url_title }}</li>
+        <li>Title: {{ sh.url_title }}  short link: {{ sh.url_short }} </li>
         {% endfor %}
     </ul>
 {% else %}
