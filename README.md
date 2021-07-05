@@ -3,7 +3,7 @@
 A web app that takes a long url and using bitly api it shortens it.
 
 The URL is submitted along with a title for easy organisations. They are then stored into the database.
-The database is composed of a single table containing three colones:
+The database is composed of a single table containing four colones:
     
     1. original_url
     2. shortened_url
